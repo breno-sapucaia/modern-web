@@ -5,10 +5,7 @@ const alunos = [
     
 
 ]
-const carro =[
-    { nome: 'uno', valor: 9000},
-    { nome: 'IPVA', valor: 500}
-]
+
 //imperativa
 let total1 = 0
 for (let i =0; i< alunos.length ; i++){
@@ -27,7 +24,7 @@ const getValor = carro => carro.valor
 const getNota = aluno => aluno.nota
 const soma = (total,atual) => total + atual
 //    variavel  array  funcacao(callback) funcao(funcao)
-const total2 = alunos.map(getNota).reduce(soma)
+const total4 = alunos.map(getNota).reduce(soma)
 const total3 = carro.map(getValor).reduce(soma)
 console.log(total2 / alunos.length)
 console.log(total3)
