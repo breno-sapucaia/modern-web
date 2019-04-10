@@ -5,7 +5,25 @@
     <meta charset="UTF-8">
     <title>Position</title>
     <style>
-        /* ... */
+        div{
+            font-size:60px;
+            padding: 30px;
+            border:solid 5px #222;
+        }
+        .static{
+            top:100px;
+            left:100px;
+            background-color: steelblue;
+        }
+        .fixed{
+            position:fixed;
+            bottom: 30px;
+            right:0px;
+            background-color:tomato;
+        }
+        .relative1{
+
+        }
     </style>
 </head>
 
@@ -22,5 +40,31 @@
     <div class="sticky">Sticky</div>
     <p style="padding-bottom: 2000px;">Opa</p>
 </body>
+<script>
+    let seta = false
+    let i = 0
+    let total = -200
+    const fixed = document.querySelector(".fixed");
+    fixed.addEventListener("click", function(e){
+        
+        setInterval(function(){
+            if (i == -250 ){
+                seta = true
+                clearInterval()
+                if (seta == true){
+                let corpo = document.getElementsByTagName('body')[0];
+                corpo = corpo.innerHTML;
+                corpo.innerHTML = corpo + '<div class="fixed"><</div>'
+                }   
+            }else{
+            i = i - 1 
+            fixed.style.right = i+"px"
+            }
+        },1)
 
+            
+        
+    })
+    if (seta == false){}
+</script>
 </html>
