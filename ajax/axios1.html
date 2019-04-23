@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Axios #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+    <script src="js/axios.js"></script>
+</head>
+
+<body class="conteudo exercicio">
+    <h1>Estados</h1>
+
+</body>
+    <script>
+        const url = 'https://www.miess.com.br/';
+        axios(url)
+            .then(resp => {
+                const itens = resp.data
+                document.body.insertAdjacentHTML('beforeend',`${itens}`)
+        })
+    </script>
+</html>

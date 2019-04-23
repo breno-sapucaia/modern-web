@@ -6,7 +6,53 @@
     <title>Flexbox #02</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        *{
+            margin:0;
+            padding:0;
+        }
+        div{
+            margin:0;
+            padding:0;
+            border:solid 5px dodgerblue;
+            font-size:40px;
+        }
+        .flex-container div {
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        .flex-container{
+            /* -webkit-box-flex: flex; */
+            display:flex;
+            height: 300px;
+            width: 600px;
+            flex-direction: row;
+        }
+        .flex-container div:nth-child(3){
+            background-color: indianred;
+            order:1;
+            order:0;
+            order:-1;
+            align-self:center;
+            align-self:stretch;
+        }
+
+        .flex-container div{
+            width:100px;
+            flex-grow:0;
+            flex-grow:1;
+        }
+        .flex-container div:nth-child(1){
+            flex-grow:2;
+            order:1;
+        }
+        .flex-container{
+            width:300px;
+            flex-shrink:1;
+        }
+        .flex-container div:nth-child(1){
+            flex-shrink:5;
+        }
     </style>
 </head>
 

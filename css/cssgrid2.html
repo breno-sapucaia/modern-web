@@ -20,6 +20,24 @@
             border: solid 5px dodgerblue;
             background: #fff;
         }
+        body{
+            display:grid;
+            grid-template-columns:
+            [inicio] 100px 
+            [metade-1 meio-1]1fr [fim];
+            /* [metade-2 meio-2] 1fr ; */
+
+            grid-template-rows:100px 1fr 100px;
+        }
+        /* .d1{
+            grid-column-start:metade-2;
+            grid-column-end:fim;
+            grid-column:meio-1 / fim;
+            grid-row: 1/ span 2;
+        } */
+        .d3,.d4{
+            grid-column:inicio / fim
+        }
     </style>
 </head>
 
@@ -27,6 +45,7 @@
     <div class="d1">1</div>
     <div class="d2">2</div>
     <div class="d3">3</div>
+    <div class="d4">4</div>
 </body>
 
 </html>
