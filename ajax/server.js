@@ -1,6 +1,7 @@
 const bodyParser = require('body-parser');
 const express = require('express');
 const app = express()
+
 //interpretar o formulario do arquivo do upload
 const multer = require('multer')
 
@@ -8,6 +9,7 @@ const multer = require('multer')
 app.use(express.static('.'))
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
+
 
 
 //multer.diskStorage recebe um objeto para configurar ou 
@@ -46,6 +48,7 @@ app.post('/formulario', (req,res) =>{
     })
 })
 
+
 app.get('/parOuImpar/',(req,res) =>{
     // req.body
     // req.query
@@ -53,6 +56,7 @@ app.get('/parOuImpar/',(req,res) =>{
     const par = parseInt(req.query.numero) % 2 === 0
     res.send( {resultado: par ? 'par' : 'impar'} )
 })
+
 
 
 app.listen(8080, () => console.log('Servidor executando'))
