@@ -1,0 +1,1 @@
+db.estados.insert({ nome : "São Paulo", sigla : "SP", regiao : "Sudeste", cidades : [{ nome : "Campinas" area : 795.7 prefeito : "Jonas Donizette", populacao : 1081000}, { nome : "Guarulhos", populacao : 1325000 },{ nome : "Sorocaba", populacao : 644919}]})
