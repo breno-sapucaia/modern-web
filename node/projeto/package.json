@@ -5,7 +5,7 @@
   "main": "src/servidor.js",
   "dependencies": {
     "body-parser": "1.18.2",
-    "express": "4.16.2",
+    "express": "4.17.3",
     "nodemon": "1.14.11"
   },
   "devDependencies": {},
